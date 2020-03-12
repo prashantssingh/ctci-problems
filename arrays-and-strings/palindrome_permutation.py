@@ -7,3 +7,14 @@
 # Input:                    Output:
 # Tact Coa                  True (permutations - "taco cat", "atco cta")
 
+def palindrome_permutation(str):
+    chars_dict = dict()
+    for char in str:
+        chars_dict[char] = chars_dict.get(char, 0) + 1
+
+    odd_counter = 0
+    for freq in chars_dict.values():
+        if (freq % 2 == 1) and (odd_counter + 1) > 1:
+            return False
+
+    return True
