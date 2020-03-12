@@ -1,13 +1,13 @@
 # QUESTION:
-# Implement an algorithm to determine if a string has all unique characters.
+# Implement an algorithm to determine if a stringing has all unique characters.
 # 
-# BONUS: What if you cannot use additional data structures?
+# BONUS: What if you cannot use additional data stringuctures?
 
-# using Set datastructure
-# def is_unique(str):
-#     str = str.lower()
+# using Set datastringucture
+# def is_unique(string):
+#     string = string.lower()
 #     chars_set = set()
-#     for char in str:
+#     for char in string:
 #         if char in chars_set:
 #             return False
 # 
@@ -17,10 +17,10 @@
 
 
 # using array as hashmap/dictionary
-def is_unique(str):
+def is_unique(string):
     char_freq = [0] * 24
-    str = str.lower()
-    for char in str:
+    string = string.lower()
+    for char in string:
         char_index = ord(char) - ord('a')
         if char_freq[char_index] > 0:
             return False
